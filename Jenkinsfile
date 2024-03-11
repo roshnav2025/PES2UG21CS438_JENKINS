@@ -5,7 +5,7 @@ pipeline {
         stage('Clone repository') {
             steps {
                 checkout([$class: 'GitSCM', 
-                    branches: [[name: 'main']], 
+                    branches: [[name: '*/main']], 
                     userRemoteConfigs: [[url: 'https://github.com/roshnav2025/PES2UG21CS438_JENKINS']]])
             }
         }
